@@ -5,7 +5,7 @@ This project focuses on crowd counting using a dataset collected from multiple s
 To enhance crowd management and public safety, our team is developing a robust crowd counting system. Using computer vision and deep learning techniques, we aim to analyze and estimate crowd density in real-time, providing valuable insights for event organizers and city planners.
 
 # ML Pipeline
-
+https://github.com/Uswatyusuff/Project2_C24/blob/ee9ffb2cca0f06527c5efa1991247e31dabca80b/ML%20Pipeline.png 
 
 # Functional And Non-Functional Requirements
 
