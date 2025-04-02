@@ -1,5 +1,4 @@
 import streamlit as st
-import torch
 from PIL import Image
 import matplotlib.pyplot as plt
 from model import CSRNet
@@ -7,7 +6,7 @@ import torchvision.transforms as transforms
 import io
 import os
 import gdown  # Make sure to install this: pip install gdown
-
+import torch
 # ---------- Streamlit Config ----------
 st.set_page_config(page_title="Crowd Counter", layout="wide")
 
