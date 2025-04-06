@@ -78,19 +78,19 @@ def download_model(model_name):
         with st.spinner("🔽 Downloading CSRNet model..."):
             gdown.download(CSRNET_MODEL_URL, CSRNET_MODEL_PATH, quiet=False)
 
-# ---------- Load Models ----------
+
+
+
 @st.cache_resource
 def load_csrnet_model():
-    download_model("CSRNet")  # makes sure it's downloaded first
+    download_model("CSRNet")
     model = CSRNet()
     checkpoint = torch.load(CSRNET_MODEL_PATH, map_location=torch.device("cpu"))
-    model.load_state_dict(checkpoint)  # ✅ you're loading a clean state_dict
+
+    # ✅ Extract only the state_dict from the checkpoint
+    model.load_state_dict(checkpoint["state_dict"])
     model.eval()
     return model
-
-
-
-
 
 
 @st.cache_resource
