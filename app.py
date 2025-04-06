@@ -2,7 +2,7 @@ import streamlit as st
 import torch
 from PIL import Image
 import matplotlib.pyplot as plt
-from model import CSRNet
+from csrnet_model import CSRNet
 import torchvision.transforms as transforms
 import io
 import os
