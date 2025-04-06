@@ -1,0 +1,5 @@
+{
+  "learning_rates": [1e-6, 1e-7],
+  "batch_sizes": [1,4],
+  "epochs_list": [50, 100]
+}
