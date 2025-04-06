@@ -8,7 +8,7 @@ import torchvision.transforms as transforms
 import torch.utils.model_zoo as model_zoo
 import io
 import os
-import gdown  # Make sure to install this: pip install gdown
+import gdown
 
 # ---------- Constants ----------
 CSRNET_MODEL_PATH = "streamlit_model_initial_test.pth"
@@ -57,8 +57,8 @@ def load_csrnet_model():
 def load_dmcount_model():
     download_model("DM-Count")  # Ensure model is downloaded
 
-    model = vgg19()  # Pass 'VGG16' as argument
-    #checkpoint = torch.load(VGG_MODEL_PATH, map_location=torch.device('cpu'))
+    model = vgg19()
+
 
     model.load_state_dict(model_zoo.load_url(model_urls['vgg19']), strict=False)
     model.eval()
