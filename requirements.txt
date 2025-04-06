@@ -5,4 +5,4 @@ matplotlib
 Pillow
 gdown
 opencv-python-headless
-
+ultralytics
