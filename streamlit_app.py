@@ -81,12 +81,13 @@ def download_model(model_name):
 # ---------- Load Models ----------
 @st.cache_resource
 def load_csrnet_model():
-    download_model("CSRNet")  # Make sure the model gets downloaded
+    download_model("CSRNet")  # makes sure it's downloaded first
     model = CSRNet()
     checkpoint = torch.load(CSRNET_MODEL_PATH, map_location=torch.device("cpu"))
-    model.load_state_dict(checkpoint)  # or ['state_dict'] if needed
+    model.load_state_dict(checkpoint)  # ✅ you're loading a clean state_dict
     model.eval()
     return model
+
 
 
 
